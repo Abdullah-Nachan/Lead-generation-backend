@@ -1,0 +1,14 @@
+# Workspace version: 1.46.14
+python-multipart==0.0.9
+databutton
+ipykernel==6.29.5
+uvicorn==0.17.6
+uvicorn[standard]==0.17.6
+fastapi==0.78.0
+openai
+beautifulsoup4
+requests
+asyncpg
+playwright
+geopy
+python-dotenv
