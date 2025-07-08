@@ -2,12 +2,11 @@ import functools
 from http import HTTPStatus
 from typing import Annotated, Callable
 import jwt
-from fastapi import Depends, HTTPException, WebSocket, status
+from fastapi import Depends, HTTPException, WebSocket, status, WebSocketDisconnect
 from fastapi.requests import HTTPConnection
 from jwt import PyJWKClient
 from pydantic import BaseModel
 from starlette.requests import Request
-from starlette.websockets import WebSocketException
 
 
 class AuthConfig(BaseModel):
@@ -67,9 +66,7 @@ def get_authorized_user(
         print(f"Request authentication failed: {e}")
 
     if isinstance(request, WebSocket):
-        raise WebSocketException(
-            code=status.WS_1008_POLICY_VIOLATION, reason="Not authenticated"
-        )
+        raise WebSocketDisconnect(code=status.WS_1008_POLICY_VIOLATION)
     else:
         raise HTTPException(
             status_code=HTTPStatus.UNAUTHORIZED, detail="Not authenticated"
