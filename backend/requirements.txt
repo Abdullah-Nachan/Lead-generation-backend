@@ -4,6 +4,7 @@ python-multipart==0.0.9
 ipykernel==6.29.5
 uvicorn==0.21.1
 fastapi==0.95.2
+PyJWT==2.8.0
 openai
 beautifulsoup4
 requests
