@@ -3,7 +3,6 @@ python-multipart==0.0.9
 databutton
 ipykernel==6.29.5
 uvicorn==0.17.6
-uvicorn[standard]==0.17.6
 fastapi==0.78.0
 openai
 beautifulsoup4
