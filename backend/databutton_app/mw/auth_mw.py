@@ -7,7 +7,7 @@ from fastapi.requests import HTTPConnection
 from jwt import PyJWKClient
 from pydantic import BaseModel
 from starlette.requests import Request
-from starlette.websockets import WebSocketException
+from starlette.websockets.exceptions import WebSocketException
 
 
 class AuthConfig(BaseModel):
