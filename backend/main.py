@@ -8,6 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 dotenv.load_dotenv()
 
 from databutton_app.mw.auth_mw import AuthConfig, get_authorized_user
+from app.apis.scraper import router as scraper_router
 
 
 def get_router_config() -> dict:
@@ -78,6 +79,7 @@ def get_firebase_config() -> dict | None:
 def create_app() -> FastAPI:
     """Create the app. This is called by uvicorn with the factory option to construct the app object."""
     app = FastAPI()
+    app.include_router(scraper_router, prefix="/routes")
     app.include_router(import_api_routers())
 
     for route in app.routes:
