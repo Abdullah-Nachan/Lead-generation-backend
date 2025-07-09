@@ -9,6 +9,6 @@ openai
 beautifulsoup4
 requests
 asyncpg
-# playwright
+playwright
 geopy
 python-dotenv
