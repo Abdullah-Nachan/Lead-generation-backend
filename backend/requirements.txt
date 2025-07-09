@@ -1,14 +1,20 @@
-# Workspace version: 1.46.14
+# Core dependencies
 python-multipart==0.0.9
-# databutton
-ipykernel==6.29.5
 uvicorn==0.21.1
 fastapi==0.95.2
 PyJWT==2.8.0
-openai
-beautifulsoup4
-requests
-asyncpg
-playwright
-geopy
-python-dotenv
+openai>=1.0.0
+beautifulsoup4==4.12.2
+requests==2.31.0
+greenlet==2.0.2  # Pinned to a stable version
+geopy==2.4.1
+python-dotenv==1.0.0
+
+# Database
+asyncpg==0.28.0  # Slightly older version known to be stable
+
+# Playwright
+playwright==1.42.0
+
+# Development (not needed in production)
+# ipykernel==6.29.5
