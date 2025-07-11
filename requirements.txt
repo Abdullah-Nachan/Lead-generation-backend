@@ -9,7 +9,8 @@ openai
 beautifulsoup4
 requests
 asyncpg
-playwright
-greenlet>=3.0.3
+watchfiles==0.18.1
+# playwright
+# greenlet>=3.0.3
 geopy
 python-dotenv
